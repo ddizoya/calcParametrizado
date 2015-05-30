@@ -40,10 +40,10 @@ public class OperacionesTest {
     @Parameterized.Parameters
     public static Collection operaciones() {
         return Arrays.asList(new Object[][]{
-            {6, true},
-            {8, false},
-            {20, true},
-            {43, false}
+            {6, 6},
+            {8, 7},
+            {20, 7},
+            {43, 7}
         });
     }
 
