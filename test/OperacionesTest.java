@@ -7,9 +7,11 @@
 import calculadora.Operaciones;
 import java.util.Arrays;
 import java.util.Collection;
+
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
+import org.junit.After;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.junit.runner.RunWith;
@@ -38,18 +40,19 @@ public class OperacionesTest {
     }
 
     @Parameterized.Parameters
-    public static Collection operaciones() {
+    public static Collection suma() {
         return Arrays.asList(new Object[][]{
-            {6, 6},
-            {8, 7},
-            {20, 7},
-            {43, 7}
+            {6, 6, 12},
+            {8, 9, 17},
+            {20, 7, 27},
+            {43, 7, 50}
         });
     }
 
     @Test
-    public void testeo() {
-        System.out.println("Número parametrizado es: " + input + ", " + input2);
+    public void testeoSuma() {
+        System.out.println("Número parametrizado es: " + input + ", " + input2 + ". El valor esperado es :" + esperado);
         assertEquals(esperado, op.suma(input, input2));
     }
+
 }
